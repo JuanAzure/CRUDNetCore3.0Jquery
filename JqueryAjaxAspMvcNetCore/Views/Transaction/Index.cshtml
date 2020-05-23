@@ -1,0 +1,19 @@
+﻿@*@model IEnumerable<JqueryAjaxAspMvcNetCore.Models.TransactionModel>
+
+    <h1 class="text-center"><i class="fas fa-comments-dollar text-success"></i>Transaction History</h1>
+
+    <div id="view-all">
+        @await Html.PartialAsync("_ViewAll", Model)
+    </div>*@
+
+@model IEnumerable<JqueryAjaxAspMvcNetCore.Models.TransactionModel>
+
+    @{ ViewData["Title"] = "Index"; }
+
+    <div id="view-all">
+        @await Html.PartialAsync("_ViewAll", Model)
+    </div>
+
+    @section Scripts{
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
